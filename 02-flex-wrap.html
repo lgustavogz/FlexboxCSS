@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex wrap</title>
+<style>
+    .flex-container {
+        color: white;
+        display: flex; /* ou column */
+        height: 150px;
+        border: 3px solid grey;
+        max-width: 300px;
+        
+    }
+
+    .item {
+        font-size: 24px;
+        height: 50%;
+        text-align: center;
+        min-width: 100px;
+        line-height: 50px;
+    }
+
+   .nowrap {
+       flex-wrap:nowrap;
+    } 
+
+    .wrap { flex-wrap: wrap;}
+
+    .wrap-reverse { flex-wrap: wrap-reverse;}
+
+    .orange { background-color: orange; }
+
+    .purple { background-color: purple; }
+
+    .darkgreen { background-color: darkgreen; } 
+
+    .blue { background-color: blue; }
+
+    .wrap { flex-wrap: wrap; }
+
+</style>
+</head>
+<body>
+
+    <h1>Flex wrap</h1>
+    <p>É a propriedade que define se os ítens devem ou não quebrar a linha.</p>
+   
+    <h2>Nowrap</h2>
+    <p>É o padrão, não permite a quebra da linha.</p>
+    <div class="flex-container nowrap">
+        <div class="item purple">1</div>
+        <div class="item orange">2</div>
+        <div class="item darkgreen">3</div>
+        <div class="item blue">4</div>
+    </div>
+
+    <h2>Wrap</h2>
+    <p>Permite a quebra de linha assim que um dos flex itens não puder mais ser compactado.</p>
+    <div class="flex-container wrap">
+        <div class="item blue">1</div>
+        <div class="item darkgreen">2</div>
+        <div class="item purple">3</div>
+        <div class="item orange">4</div>
+    </div>
+    
+    <h2>Wrap-reverse</h2>
+    <p>Permite a quebra de linha assim que um dos flex itens não puder ser mais compactado, porém na direção contrária da linha de cima.</p>
+    <div class="flex-container wrap-reverse">
+        <div class="item purple">1</div>
+        <div class="item orange">2</div>
+        <div class="item darkgreen">3</div>
+        <div class="item blue">4</div>
+    </div>
+
+</body>
+</html>

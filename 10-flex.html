@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex</title>
+
+    <style>
+        .flex-container { 
+            display: flex;
+            border: 3px solid darkgoldenrod;
+            max-width: 400px;
+            margin-bottom: 12px;
+        }
+
+        .item { 
+            background-color: peru;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .flex-1 { 
+            flex: 1; /* grow: 1; shrink: 1; basis: 0; */ 
+        }
+
+        .flex-2 { 
+            flex: 2; /* grow: 2; shrink: 1; basis: 0; */ 
+        }
+
+        .largura { 
+            width: 200px;
+            min-width: 250px;
+        }        
+
+
+    </style>
+</head>
+<body>
+    <h1>Flex</h1>
+    <p>É uma propriedade atalho de escrita para outras propriedades: grow, shrink e basis.</p>
+
+    <h2>Flex: 1</h2>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BBBBBBBBB</div>
+        <div class="item flex-1">C</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">E</div>
+    </div>
+
+    <h2>Flex: mix</h2>
+    <div class="flex-container">
+        <div class="item flex-2">A</div>
+        <div class="item flex-2">BBBB</div>
+        <div class="item flex-2">C</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">E</div>
+    </div>
+
+    <h2>Width ignorado; flex-basis: 0</h2>
+    <div class="flex-container">
+        <div class="item largura">A</div>
+        <div class="item largura">BBBB</div>
+        <div class="item largura">C</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">E</div>
+    </div>
+
+</body>
+</html>

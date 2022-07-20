@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align content</title>
+<style>
+
+    .container {
+        height: 400px;
+        max-width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 5px solid peru;
+    
+    }
+
+    .item { 
+        background-color: orange;
+        padding: 0 5px;
+        margin: 5px;
+        flex: 1;
+        text-align: center;
+        color: white;
+    }
+
+    .stretch { 
+        align-content: stretch;
+    }
+
+    .center { 
+        align-content: center;
+    }
+
+    .flex-start { 
+        align-content: flex-start;
+    }
+
+    .flex-end { 
+        align-content: flex-end;
+    }
+
+    .space-between { 
+        align-content: space-between;
+    }
+
+    .space-around { 
+        align-content: space-around;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <h1>Align-content</h1>
+    <p>Propriedade responsável por tratar o alinhamento das linhas do container em relação ao seu eixo vertical.</p>
+    <p>Para utilizar align-content é necessário que o container possua quebra de linhas, isto é, implementar o flex wrap no modo wrap e que a altura do container seja maior que a soma das linhas dos ítens. </p>
+
+    <h2>Stretch (default)</h2>
+    <div class="container"> 
+        <div class="item">A1</div>
+        <div class="item">AB12</div>
+        <div class="item">ABC123</div>
+        <div class="item">ABCD1234</div>
+        <div class="item">ABCDE12345</div>
+        <div class="item">ABCDEF123456</div>
+        <div class="item">ABCDEFG1234567</div>
+    </div>
+
+    <h2>Center</h2>
+    <div class="container center">
+        <div class="item">A1</div>
+        <div class="item">AB12</div>
+        <div class="item">ABC123</div>
+        <div class="item">ABCD1234</div>
+        <div class="item">ABCDE12345</div>
+        <div class="item">ABCDEF123456</div>
+        <div class="item">ABCDEFG1234567</div>
+    </div>
+
+    <h2>Flex-start</h2>
+    <div class="container flex-start">
+        <div class="item">A1</div>
+        <div class="item">AB12</div>
+        <div class="item">ABC123</div>
+        <div class="item">ABCD1234</div>
+        <div class="item">ABCDE12345</div>
+        <div class="item">ABCDEF123456</div>
+        <div class="item">ABCDEFG1234567</div>
+    </div>
+
+
+    <h2>Flex-end</h2>
+    <div class="container flex-end">
+        <div class="item">A1</div>
+        <div class="item">AB12</div>
+        <div class="item">ABC123</div>
+        <div class="item">ABCD1234</div>
+        <div class="item">ABCDE12345</div>
+        <div class="item">ABCDEF123456</div>
+        <div class="item">ABCDEFG1234567</div>
+    </div>
+
+    <h2>Space-between</h2>
+    <div class="container space-between">
+        <div class="item">A1</div>
+        <div class="item">AB12</div>
+        <div class="item">ABC123</div>
+        <div class="item">ABCD1234</div>
+        <div class="item">ABCDE12345</div>
+        <div class="item">ABCDEF123456</div>
+        <div class="item">ABCDEFG1234567</div>
+    </div>
+
+    <h2>Space-around</h2>
+    <div class="container space-around">
+        <div class="item">A1</div>
+        <div class="item">AB12</div>
+        <div class="item">ABC123</div>
+        <div class="item">ABCD1234</div>
+        <div class="item">ABCDE12345</div>
+        <div class="item">ABCDEF123456</div>
+        <div class="item">ABCDEFG1234567</div>
+    </div>
+
+</body>
+</html>
